@@ -25,17 +25,13 @@ class _DetailPage_jhState extends State<DetailPage_jh> {
         title: const Text("강지훈 팀원😄", style: TextStyle(color: Colors.black)),
         centerTitle: false,
         elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          color: Colors.white,
-          icon: const Icon(Icons.arrow_back),
-        ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            color: Colors.white,
+            icon: const Icon(Icons.arrow_back),
           ),
         ],
       ),
@@ -62,6 +58,67 @@ class _DetailPage_jhState extends State<DetailPage_jh> {
             ),
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(),
+              accountName: Text('강지훈'),
+              accountEmail: Text('minsakr10@naver.com'),
+              onDetailsPressed: () {},
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10.0),
+                  bottomRight: Radius.circular(10.0),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              iconColor: Colors.green,
+              focusColor: Colors.green,
+              title: Text('홈'),
+              onTap: () {},
+              trailing: Icon(
+                Icons.navigate_next,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.shopping_cart_rounded),
+              iconColor: Colors.green,
+              focusColor: Colors.green,
+              title: Text('쇼핑'),
+              onTap: () {},
+              trailing: Icon(Icons.navigate_next),
+            ),
+            ListTile(
+              leading: Icon(Icons.mark_as_unread_sharp),
+              iconColor: Colors.green,
+              focusColor: Colors.green,
+              title: Text('편지함'),
+              onTap: () {},
+              trailing: Icon(Icons.navigate_next),
+            ),
+            ListTile(
+              leading: Icon(Icons.restore_from_trash),
+              iconColor: Colors.green,
+              focusColor: Colors.green,
+              title: Text('휴지통'),
+              onTap: () {},
+              trailing: Icon(Icons.navigate_next),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              iconColor: Colors.green,
+              focusColor: Colors.green,
+              title: Text('설정'),
+              onTap: () {},
+              trailing: Icon(Icons.navigate_next),
+            ),
+          ],
+        ),
       ),
     );
   }
