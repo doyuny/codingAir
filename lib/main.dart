@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'main_detailpage.dart';
 
 //test
-
+// test wj
 void main() {
   runApp(
     MaterialApp(
