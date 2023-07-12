@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailPage_sr extends StatelessWidget {
   final int index;
 
-  const DetailPage({Key? key, required this.index}) : super(key: key);
+  const DetailPage_sr({Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

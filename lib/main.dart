@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'detail_sr.dart';
 import 'detail_wj.dart';
 import 'main_detailpage.dart';
 
@@ -122,7 +123,7 @@ class MyApp extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailPage(index: 4)),
+                                builder: (context) => DetailPage_sr(index: 4)),
                           );
                           break;
                         case 5:
