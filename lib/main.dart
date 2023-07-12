@@ -7,6 +7,12 @@ import 'detail_wj.dart';
 import 'main_detailpage.dart';
 import 'detail_jh.dart';
 
+<<<<<<< HEAD
+=======
+//test
+// test wj
+// test taeyoung
+>>>>>>> 8e588f7eac6665d60cf126306d783cfeb6b9b50a
 void main() {
   runApp(
     MaterialApp(
