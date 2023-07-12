@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'detail_wj.dart';
 import 'main_detailpage.dart';
 
-//
-//test
-// test wj
 void main() {
   runApp(
     MaterialApp(
@@ -95,23 +93,39 @@ class MyApp extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailPage(index: 0)),
+                                builder: (context) => DetailPageWj(index: 0)),
                           );
-                          print('t');
+
                           break;
                         case 1:
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailPage(index: 0)),
+                                builder: (context) => DetailPage(index: 1)),
                           );
                           break;
                         case 2:
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailPage(index: 0)),
+                                builder: (context) => DetailPage(index: 2)),
                           );
+                          break;
+                        case 3:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailPage(index: 3)),
+                          );
+                          break;
+                        case 4:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailPage(index: 4)),
+                          );
+                          break;
+                        case 5:
                           break;
                         // 나머지 인덱스에 따른 페이지 이동 로직 추가
                         default:
