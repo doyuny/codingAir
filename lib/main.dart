@@ -79,9 +79,6 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              Container(
-                height: 70,
-              ),
               Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 4,
