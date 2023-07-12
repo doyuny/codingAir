@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'detail_sr.dart';
 import 'detail_wj.dart';
 import 'main_detailpage.dart';
+import 'detail_jh.dart';
 
 void main() {
   runApp(
@@ -102,7 +103,7 @@ class MyApp extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailPage(index: 1)),
+                                builder: (context) => DetailPage_jh(index: 1)),
                           );
                           break;
                         case 2:
