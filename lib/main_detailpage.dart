@@ -4,7 +4,7 @@ class DetailPage extends StatelessWidget {
   final int index;
 
   const DetailPage({Key? key, required this.index}) : super(key: key);
-
+  //수정
   @override
   Widget build(BuildContext context) {
     return Scaffold(
