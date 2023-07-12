@@ -5,6 +5,7 @@ import 'main_detailpage.dart';
 
 //test
 // test wj
+// test taeyoung
 void main() {
   runApp(
     MaterialApp(
