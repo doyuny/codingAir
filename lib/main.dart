@@ -16,8 +16,30 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  final TextEditingController textController = TextEditingController();
+  List<String> textList = [];
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+
+  void handleButtonPressed() {
+    setState(() {
+      textList.insert(0, textController.text);
+      textController.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final List<String> imageTexts = [
@@ -58,7 +80,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
             children: [
               Container(
@@ -82,9 +104,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-
               SizedBox(height: 25), // 간격 추가
-
               Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 4,
@@ -99,7 +119,6 @@ class MyApp extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => DetailPageWj(index: 0)),
                           );
-
                           break;
                         case 1:
                           Navigator.push(
@@ -169,6 +188,44 @@ class MyApp extends StatelessWidget {
                     ),
                   );
                 }),
+              ),
+              SizedBox(height: 25), // 간격 추가
+
+              // 방명록 기능 추가
+
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    TextField(
+                      controller: textController,
+                      decoration: InputDecoration(
+                        labelText: '응원의 한마디!',
+                      ),
+                      onEditingComplete: () {
+                        handleButtonPressed();
+                      },
+                    ),
+                    SizedBox(height: 16.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        handleButtonPressed();
+                      },
+                      child: Text('Submit'),
+                    ),
+                    SizedBox(height: 16.0),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      reverse: true,
+                      itemCount: textList.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(textList[index]),
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
