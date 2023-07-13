@@ -11,12 +11,10 @@ class DetailPage_jh extends StatefulWidget {
 
 class _DetailPage_jhState extends State<DetailPage_jh> {
   final List<String> favoriteSongs = [
-    '숲의 목소리(마크튭)',
-    '모두의 세상(박효신)',
-    'Rainbow(데이먼스 이어)',
-    '꽃이 피고 지듯이(조승우)',
-    '손오공(세븐틴)',
-  ]; // 노래 목록
+    'ios 앱개발은 처음이지만..',
+    '열심히 노력하는 모습을 보여드리겠습니다!',
+    '다같이 성장해봐요!',
+  ]; // 인사말 리스트
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +39,7 @@ class _DetailPage_jhState extends State<DetailPage_jh> {
           Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
-              '내가 좋아하는 노래🎧',
+              '안녕하세요.',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
@@ -51,7 +49,7 @@ class _DetailPage_jhState extends State<DetailPage_jh> {
               itemBuilder: (context, index) {
                 final song = favoriteSongs[index];
                 return ListTile(
-                  leading: Icon(Icons.music_note),
+                  leading: Icon(Icons.airplane_ticket),
                   title: Text(song),
                 );
               },
@@ -76,36 +74,28 @@ class _DetailPage_jhState extends State<DetailPage_jh> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.person),
               iconColor: Colors.green,
               focusColor: Colors.green,
-              title: Text('홈'),
+              title: Text('INFJ'),
               onTap: () {},
               trailing: Icon(
                 Icons.navigate_next,
               ),
             ),
             ListTile(
-              leading: Icon(Icons.shopping_cart_rounded),
+              leading: Icon(Icons.pets),
               iconColor: Colors.green,
               focusColor: Colors.green,
-              title: Text('쇼핑'),
+              title: Text('고양이'),
               onTap: () {},
               trailing: Icon(Icons.navigate_next),
             ),
             ListTile(
-              leading: Icon(Icons.mark_as_unread_sharp),
+              leading: Icon(Icons.computer),
               iconColor: Colors.green,
               focusColor: Colors.green,
-              title: Text('편지함'),
-              onTap: () {},
-              trailing: Icon(Icons.navigate_next),
-            ),
-            ListTile(
-              leading: Icon(Icons.restore_from_trash),
-              iconColor: Colors.green,
-              focusColor: Colors.green,
-              title: Text('휴지통'),
+              title: Text('컴퓨터 게임'),
               onTap: () {},
               trailing: Icon(Icons.navigate_next),
             ),
@@ -113,7 +103,7 @@ class _DetailPage_jhState extends State<DetailPage_jh> {
               leading: Icon(Icons.settings),
               iconColor: Colors.green,
               focusColor: Colors.green,
-              title: Text('설정'),
+              title: Text('코딩'),
               onTap: () {},
               trailing: Icon(Icons.navigate_next),
             ),
